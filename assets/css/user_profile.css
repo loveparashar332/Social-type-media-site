@@ -1,7 +1,16 @@
+*{
+  /* margin: 0px; */
+}
 body {
-  background: lightblue;
-  margin: 0px; }
-
+  margin:0px;
+  /* height:; */
+  /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Turquoise_Water.jpg/220px-Turquoise_Water.jpg); */
+  background-image: url('https://tse3.mm.bing.net/th?id=OIP.jNAlRMLksz3dUtzDx6qnSAHaEo&pid=Api&P=0&w=288&h=181');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+  /* margin: 0px; } */
+}
 .sign-up {
   margin-left: 180px;
   margin-top: 40px;
@@ -10,7 +19,6 @@ body {
   background: lightpink; }
 
 .write {
-  text-align: center;
   font-size: 2rem;
   margin-bottom: 10px;
   color: aliceblue;
@@ -20,36 +28,77 @@ body {
   color: aliceblue; }
 
 input {
-  padding: 5px;
-  width: 20rem;
-  height: 55px;
+  padding: 3px;
+  width: 15rem;
+  height: 40px;
   background: whitesmoke;
   display: block;
-  margin-left: 40px;
+  margin-left: 5px;
   margin-top: 50px;
-  margin-bottom: 35px;
-  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-top: 7px;
   border-radius: 0.2rem; }
 
-#posts-list-container {
-  width: 18rem;
-  height: 200px;
-  overflow: scroll;
-  overflow-x: hidden;
-  text-align: center;
-  background: lightblue;
-  position: relative;
-  left: 30%; }
-  #posts-list-container ul {
-    list-style: none; }
-    #posts-list-container ul .list-post {
-      width: 100%;
-      background: white;
-      color: black;
-      margin-bottom: 20px;
-      transition: all 1s ease-in-out; }
-    #posts-list-container ul .list-post:hover {
-      transform: scale(1.3); }
+#twin-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10rem;
+  width: 100%; }
+  #twin-div #extra {
+    height: 32rem;
+    overflow: scroll;
+    overflow-x: hidden; }
+  #twin-div #extra::-webkit-scrollbar {
+    width: 0px;
+    display: transparent; }
+  #twin-div #posts-list-container {
+    width: 20rem;
+    height: 360px;
+    position: relative;
+    left: 0%;
+    border-right: 1px solid white;
+    background:black;
+  }
+  #posts-list-container h1{
+     color: Red;
+     font-weight: bolder;
+     font-size: 2.5rem;
+     margin-top: 0px;
+     margin-bottom: 5px;
+  }
+    #twin-div #posts-list-container #second {
+      overflow: scroll;
+      overflow-x: hidden;
+      text-align: center;
+      height: 415px;
+      border-right: 1px solid white;
+      width: 20rem;
+      color: white;
+      background-color:black;
+     }
+      #twin-div #posts-list-container #second ul {
+        list-style: none; }
+        #twin-div #posts-list-container #second ul .list-post {
+          width: 100%;
+          background: white;
+          color: black;
+          margin-bottom: 20px; }
+  #twin-div #second::-webkit-scrollbar {
+    width: 0px; }
+  #twin-div #user-friends {
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 100px;
+    margin: 0px;
+    width: 15rem;
+    height: 35rem;
+    border-left: 1px dashed black; }
+    #user-friends::-webkit-scrollbar{
+         width: 0px;
+    }
+    #twin-div #user-friends a {
+      margin-left: 0px; }
 
 button {
   width: 70px;
@@ -57,8 +106,109 @@ button {
   margin-top: 10px;
   background: black;
   color: white; }
+  button a {
+    color: white; }
 
 img {
   width: 100px;
   height: 100px;
   margin-bottom: 5px; }
+
+#image1 {
+  margin-top: 20px; }
+
+#group-chat {
+  position: fixed;
+  background: orange;
+  width: 310px;
+  height: 40px;
+  bottom: 370px;
+  right: 10px;
+  padding: 1px;
+  border: 1px dashed grey;
+  box-shadow: 1px 1px 1px 1px lightgrey; }
+  #group-chat p {
+    color: white; }
+
+#user-chat-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: 1px dashed grey;
+  height: 350px;
+  width: 300px;
+  background: white;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px lightgrey; }
+  #user-chat-box #chat-messages-list {
+    list-style: none;
+    padding: 10px;
+    height: 70%;
+    background-color: white;
+    overflow: auto; }
+    #user-chat-box #chat-messages-list .other-message {
+      text-align: left;
+      padding: 5px; }
+      #user-chat-box #chat-messages-list .other-message span {
+        display: inline-block;
+        padding: 15px;
+        background-color: #ffa0a0; }
+    #user-chat-box #chat-messages-list .self-message {
+      text-align: right;
+      padding: 5px; }
+      #user-chat-box #chat-messages-list .self-message span {
+        display: inline-block;
+        padding: 15px;
+        background-color: #a0dcff; }
+  #user-chat-box #chat-messages-list::-webkit-scrollbar {
+    width: 0px; }
+  #user-chat-box #chat-message-input-container {
+    height: 24%;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+    #user-chat-box #chat-message-input-container #chat-message-input {
+      height: 40px;
+      width: 225px;
+      margin-bottom: 10px;
+      display: inline-block; }
+    #user-chat-box #chat-message-input-container #send-message {
+      height: 40px;
+      width: 55px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      background: #58d258;
+      display: inline-block;
+      margin-bottom: 0px; }
+a{
+  text-decoration: underline;
+  color: white;
+}
+text{
+  color: white;
+}
+h1{
+   color:white;
+}
+#second{
+  background-image: url('https://tse4.mm.bing.net/th?id=OIP.05fSa7RkZDFE2OQ83Z68swHaNK&pid=Api&P=0&w=300&h=300');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+.user-profile{
+     /* content: ''; */
+     /* background-image: url('https://tse3.mm.bing.net/th?id=OIP.Apj43gPQ4qzdanqdQK9-KwHaFj&pid=Api&P=0&w=240&h=181'); */
+       /* background-color: violet; */
+     /* background-image:url('http://i1.wp.com/www.technonutty.com/wp-content/uploads/2014/10/whatsapp-images.jpg') ; */
+     /* border-radius: ; */
+     /* background-size: 2px; */
+      /* background-image: url('https://tse3.mm.bing.net/th?id=OIP.Apj43gPQ4qzdanqdQK9-KwHaFj&pid=Api&P=0&w=240&h=181'); */
+      /* list-style: none; */
+      /* background-size: cover; */
+      /* background-attachment: fixed; */
+      list-style: none;
+      text-decoration-style: none;
+}

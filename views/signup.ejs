@@ -1,15 +1,27 @@
-<link rel="stylesheet" href="/css/user_profile.css">
- 
+<link rel="stylesheet" href="/css/signpages.css">
+ <div>
+     <img src="http://vspot.s3.amazonaws.com/sign-up/Logos/SignUp-Transitioanl-Logo-Large.png" height="100px"
+     width="100px">
+ </div>
  <div class="sign-up">
         <div class="write">
-               <p> SIGN-UP </p>
+               <h1> SIGN-UP </h1>
             </div>
-       <form action="/create" method="POST">
-            <input type="text" name="name" placeholder="Username"  required>
-           <input type="email" name="email" placeholder="Email or Phone"  required>
-           <input type="password" name="password" placeholder="Password"  required>
-           <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+       <form  action="/create" method="POST">
+            <input type="text" name="name" placeholder="Username" id="username" required>
+            <span id="usererror" class="text-danger font-weight-bold"></span>
+           <input type="email" name="email" placeholder="Email or Phone" id="email"  required>
+           <span id="emailerror" class="text-danger font-weight-bold"></span>
+           <input type="password" name="password" placeholder="Password" id="password" required>
+           <span id="passworderror" class="text-danger font-weight-bold"></span>
+           <input type="password" name="confirm_password" placeholder="Confirm Password" id="cpassword" required>
+           <span id="cpassworderror" class="text-danger font-weight-bold"></span>
            <button type="submit">SIGN UP</button>
        </form>
  </div>
-       
+ <p>
+     <a href="/users/auth/google" id="google-link"><img src="https://tse4.mm.bing.net/th?id=OIP.kew9oQ7CCajHfwZ_8rCoWQHaEc&pid=Api&P=0&w=282&h=170" width="0px" height="0px"></a>
+ </p>
+  
+ 
+        

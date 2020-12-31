@@ -1,0 +1,10 @@
+<!--link rel="stylesheet" href="/css/signpages.css">
+<link rel="stylesheet" href="/css/user_profile.css">
+       <h1>Set Your Password</h1>
+       <p><%= user_found.name%></p>
+       <p><%= user_found.id%></p>
+       <form action="/check-forgotpassword/?id=<%= user_found._id%>" method="POST">
+           <input type="password" name="password" placeholder="Password" required>
+           <input type="password" name="confirm_password" placeholder="confirm password" required>
+           <input type="submit" value="submit">
+ </form-->

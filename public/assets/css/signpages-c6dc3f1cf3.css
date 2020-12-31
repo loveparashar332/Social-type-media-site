@@ -1,0 +1,12 @@
+body {
+  background: lightblue; }
+  body img {
+    transition: all 1s ease-in-out;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px; }
+  body img:hover {
+    transform: scale(1.3); }
+  body input {
+    padding: 5px; }

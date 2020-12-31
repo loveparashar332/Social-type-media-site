@@ -1,0 +1,158 @@
+body {
+  background: lightblue;
+  margin: 0px; }
+
+.sign-up {
+  margin-left: 180px;
+  margin-top: 40px;
+  width: 26rem;
+  height: 25rem;
+  background: lightpink; }
+
+.write {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: aliceblue;
+  margin-top: 10px; }
+
+.write p {
+  color: aliceblue; }
+
+input {
+  padding: 3px;
+  width: 15rem;
+  height: 40px;
+  background: whitesmoke;
+  display: block;
+  margin-left: 5px;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  margin-top: 7px;
+  border-radius: 0.2rem; }
+
+#twin-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10rem;
+  width: 100%; }
+  #twin-div #extra {
+    height: 32rem;
+    overflow: scroll;
+    overflow-x: hidden; }
+  #twin-div #extra::-webkit-scrollbar {
+    width: 0px;
+    display: transparent; }
+  #twin-div #posts-list-container {
+    width: 20rem;
+    height: 300px;
+    position: relative;
+    left: 0%;
+    border-right: 1px solid black; }
+    #twin-div #posts-list-container #second {
+      overflow: scroll;
+      overflow-x: hidden;
+      text-align: center;
+      height: 350px;
+      border-right: 1px solid black;
+      width: 20rem;
+      background: lightblue; }
+      #twin-div #posts-list-container #second ul {
+        list-style: none; }
+        #twin-div #posts-list-container #second ul .list-post {
+          width: 100%;
+          background: white;
+          color: black;
+          margin-bottom: 20px; }
+  #twin-div #second::-webkit-scrollbar {
+    width: 0px; }
+  #twin-div #user-friends {
+    margin-top: 100px;
+    margin: 0px;
+    width: 15rem;
+    height: 35rem;
+    border-left: 1px dashed black; }
+    #twin-div #user-friends a {
+      margin-left: 0px; }
+
+button {
+  width: 70px;
+  height: 30px;
+  margin-top: 10px;
+  background: black;
+  color: white; }
+  button a {
+    color: white; }
+
+img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px; }
+
+#image1 {
+  margin-top: 20px; }
+
+#group-chat {
+  position: fixed;
+  background: orange;
+  width: 310px;
+  height: 40px;
+  bottom: 370px;
+  right: 10px;
+  padding: 1px;
+  border: 1px dashed grey;
+  box-shadow: 1px 1px 1px 1px lightgrey; }
+  #group-chat p {
+    color: white; }
+
+#user-chat-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border: 1px dashed grey;
+  height: 350px;
+  width: 300px;
+  background: white;
+  padding: 5px;
+  box-shadow: 1px 1px 1px 1px lightgrey; }
+  #user-chat-box #chat-messages-list {
+    list-style: none;
+    padding: 10px;
+    height: 70%;
+    background-color: white;
+    overflow: auto; }
+    #user-chat-box #chat-messages-list .other-message {
+      text-align: left;
+      padding: 5px; }
+      #user-chat-box #chat-messages-list .other-message span {
+        display: inline-block;
+        padding: 15px;
+        background-color: #ffa0a0; }
+    #user-chat-box #chat-messages-list .self-message {
+      text-align: right;
+      padding: 5px; }
+      #user-chat-box #chat-messages-list .self-message span {
+        display: inline-block;
+        padding: 15px;
+        background-color: #a0dcff; }
+  #user-chat-box #chat-messages-list::-webkit-scrollbar {
+    width: 0px; }
+  #user-chat-box #chat-message-input-container {
+    height: 24%;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+    #user-chat-box #chat-message-input-container #chat-message-input {
+      height: 40px;
+      width: 225px;
+      margin-bottom: 10px;
+      display: inline-block; }
+    #user-chat-box #chat-message-input-container #send-message {
+      height: 40px;
+      width: 55px;
+      font-size: 16px;
+      color: white;
+      border: none;
+      background: #58d258;
+      display: inline-block;
+      margin-bottom: 0px; }

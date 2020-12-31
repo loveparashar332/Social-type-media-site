@@ -1,0 +1,26 @@
+#footer {
+  height: 144px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: darkblue; }
+  #footer #info {
+    margin-left: 100px;
+    margin-top: 50px; }
+  #footer img {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+  #footer p {
+    color: white;
+    font-size: 1.4rem;
+    margin-left: 10px; }
+  #footer ul {
+    list-style: none; }
+    #footer ul a {
+      text-decoration: none;
+      color: white; }
+    #footer ul a:hover {
+      color: black; }

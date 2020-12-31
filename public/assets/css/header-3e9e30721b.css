@@ -1,0 +1,40 @@
+#header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  background: darkblue;
+  justify-content: space-between; }
+  #header #div1 {
+    height: 50px;
+    margin-top: -15px;
+    width: auto;
+    margin-left: 5px; }
+    #header #div1 p {
+      font-size: 1.6rem;
+      color: white; }
+  #header #div2 {
+    height: 50px;
+    margin-top: -10px;
+    margin-right: 10px; }
+    #header #div2 ul {
+      list-style: none; }
+      #header #div2 ul a {
+        text-decoration: none;
+        color: white; }
+      #header #div2 ul a:hover {
+        color: aquamarine; }
+
+main {
+  height: 35rem; }
+
+.icon {
+  display: inline-block;
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 15px; }
+  .icon i {
+    color: white;
+    transition: all 1s ease-in-out; }
+  .icon i:hover {
+    box-shadow: 0px 0px 8px 7px lightgrey; }

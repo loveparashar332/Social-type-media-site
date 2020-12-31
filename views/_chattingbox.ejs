@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+<% if (locals.user){ %>
+  
+    <div id="group-chat">
+        <p>group chat with friends</p>
+    </div>
+	<div id="user-chat-box">
+		<ul id="chat-messages-list">
+			<li class="other-message">
+				<span>Other Message</span>
+			</li>
+			<li class="self-message">
+				<span>
+					Self Message
+				</span>
+			</li>
+
+		</ul>
+		<div id="chat-message-input-container">
+          <form action="/createmessage" method="POST">
+			<input id="chat-message-input" placeholder="Type message here" name="message">
+            <button id="send-message">Send</button>
+          </form>
+		</div>
+
+    </div>
+    
+<% } %>

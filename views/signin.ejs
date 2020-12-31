@@ -1,13 +1,19 @@
-<link rel="stylesheet" href="/css/user_profile.css">
+<link rel="stylesheet" href="/css/signpages.css">
+<div>
+    <img src="http://vspot.s3.amazonaws.com/sign-up/Logos/SignUp-Transitioanl-Logo-Large.png" height="100px"
+    width="100px">
+</div>                                                                     
 <div class="sign-up">
         <div class="write">
-               <p> SIGN-IN</p>
+               <h1> SIGN-IN</h1>  
             </div>
        <form action="/createsession" method="POST">
-            
            <input type="email" name="email" placeholder="Email or Phone"  required>
            <input type="password" name="password" placeholder="Password"  required>
            <button type="submit">SIGN In</button>
-       </form>
+       </form>  
+          <!-- <a href="/forgotpassword">Forgot password?</a> -->
  </div>
- 
+ <p>
+     <a href="/users/auth/google" id="google-link">Google Sign In/Sign Up</a>
+ </p>

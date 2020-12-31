@@ -3,7 +3,8 @@
   height: 50px;
   display: flex;
   flex-direction: row;
-  background: blue;
+  /* background-image: url(http://tnp.dtu.ac.in/rm_2016-17/img/main-bg.jpg); */
+  background-color: black;
   justify-content: space-between; }
   #header #div1 {
     height: 50px;
@@ -26,4 +27,15 @@
         color: aquamarine; }
 
 main {
-  height: 35rem; }
+  height: 37.7rem; }
+
+.icon {
+  display: inline-block;
+  list-style: none;
+  margin-left: 10px;
+  margin-top: 15px; }
+  .icon i {
+    color: white;
+    transition: all 1s ease-in-out; }
+  .icon i:hover {
+    box-shadow: 0px 0px 8px 7px lightgrey; }

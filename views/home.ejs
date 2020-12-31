@@ -1,29 +1,101 @@
 <link rel="stylesheet" href="/css/user_profile.css">
-       <h1><%= title%></h1>
-       <p><%= user.name %></p>
-       <p><%= user.email %></p>
-
-<section id="feed-posts">
-       <h4>Posts</h4>
-    <% if(locals.user){%>
-       <form action="/posts/create" id="new-post-form" method="POST">
-              <img src="" alt="">
-           <textarea name="content"  cols="30" rows="3" placeholder="Type Here...."></textarea><br>
-           <button type="submit">Post</button>
-       </form>
-     <% } %>
+   <div id="twin-div">
        <div id="posts-list-container">
-              <ul>
+                     <h1>Posts</h1>
+                 <div id="first">
+                     <% if(locals.user){%>
+                        <form onsubmit="return Validation()" action="/posts/create" id="new-post-form" method="POST">
+                            <textarea name="content"  cols="30" rows="3" placeholder="Type Here...."  id = "userpost" required ></textarea><br>
+                            <button type="submit">Post</button>
+                        </form>
+                      <% } %>
+                 </div>
+              <div id="second" >
+               <ul>
                      <%for(post of posts){%>
-                     
-                        <li>
-                               <%= post.content%>
-                               <small>
-                                      <%= post.user %>
-                               </small>
-                        </li>
-                      
+                        <%- include('_post') -%>
                      <%}%>
               </ul>
+              </div>
        </div>
+       <div>
+          <button type="submit" id="hide">hide</button>
+        <div id="extra">
+           <div id="image">
+             <img id="image1" src="https://i.pinimg.com/originals/af/25/49/af25490494d3338afef00869c59fdd37.png" alt="user-avatar" height="200px
+              width="200px">
+            </div>
+            <h1 id="user-name"><%= user.name %></h1>
+            <!-- <p style="color:red">
+               How are you!!!!!
+            </p> -->
+           <p id="update">
+            <a href="" style="color: red;">Want to Update your profile?</a>
+            </p>
+          <div id="one">
+            <a href="/users/update/<%= user.id %>"><img src="<%= user.avatar %>" alt="<%= user.name%>"></a>
+            <form action="/users/update/<%= locals.user.id %>" enctype="multipart/form-data" method="POST">
+               <input type="text" name="name" placeholder="Your Name" value="<%= all_users.name %>" required>
+               <input type="email" name="email" placeholder="Email" value="<%= all_users.email %>" required>
+               <input type="file" name="avatar" placeholder="Profile Picture">
+               <input type="submit" value="update">
+            </form>
+          </div>
+          </div>
+       </div>
+     <div id="user-friends" style="border-color: white;">
+       <h4 style="color: Green;font-size: 3rem;margin-bottom: 0px;margin-top: 0px;">friends</h4>
+        <% for(u of all_users){%>
+              <p id="friend-image">
+                 
+                  <a class="user-profile" data-value="<%= u.id %>" href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                  
+              </p>
+        <% } %>
+     </div>
+  </div>
+  <div>
+   <%- include('_chattingbox') -%>
+  </div>
 </section>
+ <script type="text/javascript">
+   function Validation(){
+      var userpost = document.getElementById('userpost').value;
+      var postcheck = /^[A-za-z0-9]{3,}$/
+      if(postcheck.test(userpost)){
+         document.getElementById('userpost').innerHTML=" ";
+      }
+      else 
+         {
+            alert("Too small or too large please delete it!!!");
+         }
+   }
+</script> 
+<script src="/js/home_posts.js"></script>
+<script src="/js/home_comments.js"></script>
+<script src="/js/toggle_likes.js"></script>
+<script>
+   $('.toggle-like-button').each(function(){
+      let self = this;
+      let toggleLike = new ToggleLike(self);
+   });
+   $('#update a').on('click',function(){
+      console.log('hiiiiiiiiiiiiiii');
+     // e.preventDefault();
+      let updates=false;
+      if(updates == false){
+         $('#one').show(10000);
+         updates=true;
+      }else{
+         $('#one').hide(1000);
+         updates=false;
+      }
+   })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+<% if(locals.user){ %>
+<script>
+   new ChatEngine('chat-box','<%= locals.user.email%>','<%= locals.user.name%>')
+</script>
+<% } %>

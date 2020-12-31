@@ -1,0 +1,15 @@
+ul{
+    list-style: none;
+    
+}
+li{
+    list-style: none;
+    font-size: 1.4rem;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration-style: dotted;
+}
