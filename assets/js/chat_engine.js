@@ -35,7 +35,6 @@ class ChatEngine{
                 });
             }
         });
-        
         self.socket.on('recieve_message',function(data){
             console.log('message received', data.message);
 
@@ -53,7 +52,6 @@ class ChatEngine{
              newMessage.append($('<sub>',{
                  'html': data.user_name
              }));
-
              newMessage.addClass(messageType);
              $('#chat-messages-list').append(newMessage);
         });

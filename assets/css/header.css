@@ -1,6 +1,7 @@
 #header {
   width: 100%;
   height: 50px;
+  margin-top: -17px;
   display: flex;
   flex-direction: row;
   /* background-image: url(http://tnp.dtu.ac.in/rm_2016-17/img/main-bg.jpg); */
