@@ -48,7 +48,6 @@ gulp.task('images',function(done){
     .pipe(gulp.dest('./public/assets'));
     done();
 })
-
 //empty the public/assets directory
 gulp.task('clean:assets',function(done){
     del.sync('./public/assets');
