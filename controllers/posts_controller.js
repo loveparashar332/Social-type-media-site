@@ -1,5 +1,5 @@
 const Post=require('../models/post');
-// const Comment = require('../models/comment');
+const Comment = require('../models/comment');
 // const PostMailer=require('../mailers/comments_mailer');
 const Like=require('../models/like');
 
