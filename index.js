@@ -82,10 +82,16 @@ app.use(flash());
 app.use(customMware.setFlash);
 // use express router
 app.use('/',require('./routes'));
-app.listen(process.env.PORT || 8000,function(err){
-    if(err){
-        //interpolation using backticks
-        console.log(`error in running the server : ${err}`);
-    }
-    console.log(`server is running on port : ${port}`);
-});
+app.set( 'port', ( process.env.PORT || 8000 ));
+
+// Start node server
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
+// app.listen(process.env.PORT || 8000,function(err){
+//     if(err){
+//         //interpolation using backticks
+//         console.log(`error in running the server : ${err}`);
+//     }
+//     console.log(`server is running on port : ${port}`);
+// });
