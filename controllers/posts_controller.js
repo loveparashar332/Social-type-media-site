@@ -1,6 +1,6 @@
 const Post=require('../models/post');
-const Comment = require('../models/comment');
-const PostMailer=require('../mailers/comments_mailer');
+// const Comment = require('../models/comment');
+// const PostMailer=require('../mailers/comments_mailer');
 const Like=require('../models/like');
 
 module.exports.create=async function(req,res){
@@ -10,7 +10,7 @@ module.exports.create=async function(req,res){
             user: req.user._id
           });
         post= await post.populate('user','name email').execPopulate();
-        PostMailer.newPost(post);
+        // PostMailer.newPost(post);
         if(req.xhr){
             return res.status(200).json({
                 data:{
