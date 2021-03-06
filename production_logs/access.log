@@ -854,3 +854,8 @@
 ::1 - - [05/Mar/2021:15:31:35 +0000] "GET / HTTP/1.1" 200 142278 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
 ::1 - - [05/Mar/2021:15:31:35 +0000] "GET /js/home_comments.js HTTP/1.1" 404 158 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
 ::1 - - [05/Mar/2021:15:31:35 +0000] "GET /js/home_comments.js HTTP/1.1" 404 158 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [06/Mar/2021:09:40:20 +0000] "GET / HTTP/1.1" 302 58 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [06/Mar/2021:09:40:21 +0000] "GET /signin HTTP/1.1" 200 3959 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [06/Mar/2021:09:40:21 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [06/Mar/2021:09:40:22 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
+::1 - - [06/Mar/2021:09:40:22 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:8000/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.190 Safari/537.36"
